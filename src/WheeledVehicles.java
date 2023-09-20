@@ -1,4 +1,4 @@
-public abstract class WheeledVehicles {
+public abstract class WheeledVehicles implements ServiceInterface {
     private final String modelName;
     private final int wheelsCount;
 
@@ -13,5 +13,17 @@ public abstract class WheeledVehicles {
 
     public int getWheelsCount() {
         return wheelsCount;
+    }
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
     }
 }

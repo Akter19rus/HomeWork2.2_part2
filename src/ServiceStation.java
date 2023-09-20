@@ -1,30 +1,17 @@
-public class ServiceStation implements ServiceStationInterface {
-    @Override
-    public void check(WheeledVehicles[] wheeledVehicles) {
-        autoReportUpdateTyre(wheeledVehicles);
+public class ServiceStation {
+    public void check(WheeledVehicles wheeledVehicles) {
+        if (wheeledVehicles instanceof Car) {
+            System.out.println("Обслуживаем " + wheeledVehicles.getModelName());
+            wheeledVehicles.service();
 
-        }
+        } else if (wheeledVehicles instanceof Truck) {
+            System.out.println("Обслуживаем " + wheeledVehicles.getModelName());
+            wheeledVehicles.service();
 
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
 
-    @Override
-    public void checkEngine(Car car, Truck truck) {
-        System.out.println("Проверяем двигатель");
-    }
-
-    @Override
-    public void checkTrailer(Truck truck) {
-        System.out.println("Проверяем прицеп");
-    }
-
-    public void autoReportUpdateTyre(WheeledVehicles[] wheeledVehicles) {
-        int tyres = 0;
-        for (WheeledVehicles i : wheeledVehicles) {
-        }
-            
+        } else if (wheeledVehicles instanceof Bicycle) {
+            System.out.println("Обслуживаем " + wheeledVehicles.getModelName());
+            wheeledVehicles.service();
         }
     }
 }
