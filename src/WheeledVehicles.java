@@ -19,11 +19,7 @@ public abstract class WheeledVehicles implements ServiceInterface {
         System.out.println("Меняем покрышку");
     }
 
-    public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
+
+
 }
